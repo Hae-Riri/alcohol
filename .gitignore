@@ -1,0 +1,5 @@
+.gradle
+.idea
+# Project exclude paths
+/internalApi/build/
+/internalApi/build/classes/java/main/

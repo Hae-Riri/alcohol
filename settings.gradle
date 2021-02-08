@@ -1,0 +1,7 @@
+rootProject.name = 'alcohol'
+include 'common'
+include 'dto'
+include 'domain'
+include 'service'
+include 'internalApi'
+
