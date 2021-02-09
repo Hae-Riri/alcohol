@@ -23,6 +23,7 @@ subprojects {
 
     repositories {
         mavenCentral()
+        jcenter()
     }
 
     configurations {
@@ -30,19 +31,30 @@ subprojects {
             extendsFrom annotationProcessor
         }
     }
-}
 
-dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-actuator'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-}
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-actuator'
+        implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+        
+        //junit4 제거
+        testImplementation('org.springframework.boot:spring-boot-starter-test') {
+            exclude module: 'junit'
+        }
+        //junit5 사용
+        testImplementation('org.junit.jupiter:junit-jupiter-api:5.2.0')
+        testCompile('org.junit.jupiter:junit-jupiter-params:5.2.0')
+        testRuntime('org.junit.jupiter:junit-jupiter-engine:5.2.0')
 
-test {
-    useJUnitPlatform()
+        compile('com.h2database:h2')
+        compile('org.mariadb.jdbc:mariadb-java-client')
+    }
+
+    test {
+        useJUnitPlatform() //junit 5
+    }
 }
 
 project(':common') {
