@@ -1,10 +1,10 @@
-package kr.co.theplay.hello;
+package kr.co.theplay.zzz;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class HelloController {
+public class ZUserController {
 
     @GetMapping("/hello")
     public String hello(){
