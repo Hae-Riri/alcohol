@@ -1,5 +1,7 @@
 package kr.co.theplay.zzz;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,19 +10,20 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ZUserReqDto {
 
-    private Long id;
-
+    @ApiModelProperty(value = "이름", dataType = "String", required = true, example = "haerim")
     private String name;
 
+    @ApiModelProperty(value = "아이디", dataType = "String", required = true, example = "ehl3288@naver.com")
     private String uid;
 
+    @ApiModelProperty(value = "연락처", dataType = "String", required = true, example = "010-5768-5933")
     private String phoneNumber;
 
+    @ApiModelProperty(value = "성별", dataType = "String", required = true, example = "F")
     private String sex;
 
     @Builder
-    public ZUserReqDto(Long id, String name, String uid, String phoneNumber, String sex){
-        this.id = id;
+    public ZUserReqDto(String name, String uid, String phoneNumber, String sex){
         this.name = name;
         this.uid = uid;
         this.phoneNumber = phoneNumber;

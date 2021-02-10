@@ -18,14 +18,14 @@ public class SwaggerConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2).apiInfo(swaggerInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("kr.co.theplay.internalApi")) //해당 패키지 중 RequestMapping으로 할당된 URL 리스트 추출
-                //.apis(RequestHandlerSelectors.any()) RequestMapping 된 모든 URL 리스트 추출
+                .apis(RequestHandlerSelectors.basePackage("kr.co.theplay")) //해당 패키지 중 RequestMapping으로 할당된 URL 리스트 추출
+                .apis(RequestHandlerSelectors.any()) //RequestMapping 된 모든 URL 리스트 추출
                 .paths(PathSelectors.ant("/api/**")) //그 중 /api/**인 URL들만 필터링
                 .build();
     }
 
     private ApiInfo swaggerInfo(){
-        return new ApiInfoBuilder().title("오늘 한 주 API Documentation")
+        return new ApiInfoBuilder().title("오늘 한 주 API 문서")
                 .description("오늘 한 주 앱 개발에 사용되는 서버 API에 대한 연동 문서입니다.")
                 .license("theplay").build();
     }
