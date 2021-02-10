@@ -1,4 +1,4 @@
-package kr.co.theplay.response.model;
+package kr.co.theplay.common.model;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;

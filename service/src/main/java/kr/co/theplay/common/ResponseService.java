@@ -1,8 +1,8 @@
-package kr.co.theplay.response;
+package kr.co.theplay.common;
 
-import kr.co.theplay.response.model.CommonResult;
-import kr.co.theplay.response.model.ListResult;
-import kr.co.theplay.response.model.SingleResult;
+import kr.co.theplay.common.model.CommonResult;
+import kr.co.theplay.common.model.ListResult;
+import kr.co.theplay.common.model.SingleResult;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
