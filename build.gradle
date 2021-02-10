@@ -76,6 +76,14 @@ project(':dto') {
     }
 }
 
+project(':internalApi') {
+    dependencies {
+        implementation project(':dto')
+        implementation project(':service')
+        implementation project(':common')
+    }
+}
+
 
 project(':service') {
     dependencies {

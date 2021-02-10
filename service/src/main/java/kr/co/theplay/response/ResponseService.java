@@ -51,6 +51,8 @@ public class ResponseService {
         return result;
     }
 
+
+
     /**
     * 응답 성공/실패 여부를 처리하여 세팅하는 메소드들
     */
@@ -68,4 +70,23 @@ public class ResponseService {
         result.setCode(CommonResponse.FAIL.getCode());
         result.setMsg(CommonResponse.FAIL.getMsg());
     }
+
+
+
+    /**
+     * 응답 성공/실패 시 결과를 리턴하는 메소드
+     */
+
+    public CommonResult getSuccessResult(){
+        CommonResult result = new CommonResult();
+        setSuccessResult(result);
+        return result;
+    }
+
+    public CommonResult getFailResult(int code, String msg){
+        CommonResult result = new CommonResult();
+        setFailResult(result);
+        return result;
+    }
+
 }
