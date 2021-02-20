@@ -14,6 +14,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
 
+    //new로 생성하는 듯 하지만 싱글톤 패턴이라서 최초 한번만 메모리를 할당하고 static 메모리에 인스턴스를 만들어서 사용한다.
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2).apiInfo(swaggerInfo())

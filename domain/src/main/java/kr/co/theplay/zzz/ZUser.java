@@ -10,7 +10,7 @@ import javax.persistence.*;
 
 @Getter
 @Entity
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor(access = AccessLevel.PROTECTED)// JPA에서 프록시를 생성하려면 반드시 기본 생성자를 가져야함.
 public class ZUser extends BaseTimeEntity {
 
     @Id

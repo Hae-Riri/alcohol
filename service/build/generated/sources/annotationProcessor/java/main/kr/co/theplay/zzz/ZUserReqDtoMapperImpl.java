@@ -6,8 +6,8 @@ import kr.co.theplay.zzz.ZUserReqDto.ZUserReqDtoBuilder;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-02-10T17:46:42+0900",
-    comments = "version: 1.3.1.Final, compiler: javac, environment: Java 1.8.0_191-1-ojdkbuild (Oracle Corporation)"
+    date = "2021-02-20T23:13:45+0900",
+    comments = "version: 1.3.1.Final, compiler: javac, environment: Java 15.0.1 (Oracle Corporation)"
 )
 public class ZUserReqDtoMapperImpl implements ZUserReqDtoMapper {
 
@@ -19,7 +19,6 @@ public class ZUserReqDtoMapperImpl implements ZUserReqDtoMapper {
 
         ZUserBuilder zUser = ZUser.builder();
 
-        zUser.id( dto.getId() );
         zUser.name( dto.getName() );
         zUser.uid( dto.getUid() );
         zUser.phoneNumber( dto.getPhoneNumber() );
@@ -36,7 +35,6 @@ public class ZUserReqDtoMapperImpl implements ZUserReqDtoMapper {
 
         ZUserReqDtoBuilder zUserReqDto = ZUserReqDto.builder();
 
-        zUserReqDto.id( entity.getId() );
         zUserReqDto.name( entity.getName() );
         zUserReqDto.uid( entity.getUid() );
         zUserReqDto.phoneNumber( entity.getPhoneNumber() );
