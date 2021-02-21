@@ -31,4 +31,5 @@ public class ZUserController {
         zUserService.saveZUser(zUserReqDto);
         return new ResponseEntity<>(responseService.getSuccessResult(), HttpStatus.OK);
     }
+
 }

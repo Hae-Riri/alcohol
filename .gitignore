@@ -1,5 +1,18 @@
 .gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+### IntelliJ IDEA ###
 .idea
+
+### MapStruct Generated Source ###
+/service/src/main/generated/
+
+### secret file ###
+/internalApi/src/main/resources/application.yml
+
 # Project exclude paths
 /internalApi/build/
 /internalApi/build/classes/java/main/
