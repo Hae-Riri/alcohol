@@ -38,4 +38,8 @@ public class ZUser extends BaseTimeEntity {
         this.sex = sex;
     }
 
+    public void updateUser(String name, String phoneNumber) {
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+    }
 }

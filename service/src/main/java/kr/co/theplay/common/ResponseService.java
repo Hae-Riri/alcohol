@@ -3,6 +3,7 @@ package kr.co.theplay.common;
 import kr.co.theplay.common.model.CommonResult;
 import kr.co.theplay.common.model.ListResult;
 import kr.co.theplay.common.model.SingleResult;
+import kr.co.theplay.zzz.ZUserSingleResDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
