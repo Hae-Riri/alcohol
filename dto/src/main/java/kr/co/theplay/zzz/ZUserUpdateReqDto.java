@@ -14,7 +14,7 @@ public class ZUserUpdateReqDto {
 
     @ApiModelProperty(value = "이름", dataType = "String", required = true, example = "010-1234-1234")
     private String phoneNumber;
-
+    //asdf
     @Builder
     public ZUserUpdateReqDto(String name, String phoneNumber){
         this.name = name;
