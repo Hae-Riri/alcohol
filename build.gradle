@@ -4,6 +4,10 @@ plugins {
     id 'java'
 }
 
+bootRun {
+    main = 'kr.co.theplay.InternalApiApplication'
+}
+
 bootJar{
     mainClassName = 'kr.co.theplay.InternalApiApplication'
 }
@@ -17,6 +21,8 @@ subprojects {
     apply plugin: 'application'
     apply plugin: 'org.springframework.boot'
     apply plugin: 'io.spring.dependency-management'
+
+    mainClassName = 'kr.co.theplay.InternalApiApplication'
 
     group = 'kr.co.theplay'
     version = '1.0-SNAPSHOT'
